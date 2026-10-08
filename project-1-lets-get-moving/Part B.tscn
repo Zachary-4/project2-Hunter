@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bckgobnviv10l"]
+
+[ext_resource type="Script" uid="uid://banmkhbpf2wet" path="res://player_3d.gd" id="1_1ypk4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3oyan"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_fdmr7"]
+sky_material = SubResource("ProceduralSkyMaterial_3oyan")
+
+[sub_resource type="Environment" id="Environment_ls5h2"]
+background_mode = 2
+sky = SubResource("Sky_fdmr7")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra2i3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4gaj"]
+size = Vector3(4.39563, 3.7109375, 4.3447266)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ra2i3"]
+
+[node name="Node3D" type="Node3D" unique_id=2106054717]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1173345719]
+environment = SubResource("Environment_ls5h2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=505489474]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player3D" type="MeshInstance3D" parent="." unique_id=1265851106]
+mesh = SubResource("CapsuleMesh_ra2i3")
+script = ExtResource("1_1ypk4")
+
+[node name="Camera3D" type="Camera3D" parent="Player3D" unique_id=1738341682]
+transform = Transform3D(-0.01593193, -0.296249, 0.95497787, 4.656613e-10, 0.95509905, 0.2962866, -0.9998731, 0.004720418, -0.015216572, 2.9295616, 2.2235663, -0.7994313)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1090134089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8682146, -1.3554688, 5.1458945)
+mesh = SubResource("BoxMesh_g4gaj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=214791517]
+transform = Transform3D(3.645244, 0, 0, 0, 3.329071, 0, 0, 0, 5.472921, -15.119522, -1.3036894, -4.3902698)
+mesh = SubResource("SphereMesh_ra2i3")

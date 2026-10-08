@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cdp4osmtb1053"]
+
+[ext_resource type="Texture2D" uid="uid://dwl6e60rovrvr" path="res://icon.svg" id="1_8ekm2"]
+[ext_resource type="Script" uid="uid://cle1lgf8s7nfy" path="res://player.gd" id="2_cbp8q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ra2i3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ekm2"]
+
+[node name="Node2D" type="Node2D" unique_id=1318047815]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1476636507]
+z_index = 5
+position = Vector2(456, 264)
+scale = Vector2(0.4609375, 0.4609375)
+texture = ExtResource("1_8ekm2")
+script = ExtResource("2_cbp8q")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1780408710]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(634.49994, 352.50003)
+scale = Vector2(-1283.9999, -762.99994)
+mesh = SubResource("BoxMesh_ra2i3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=63330944]
+modulate = Color(1, 0, 0, 1)
+z_index = 1
+position = Vector2(198.39417, 214.18748)
+scale = Vector2(81.211685, 219.62503)
+mesh = SubResource("BoxMesh_8ekm2")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=40480699]
+modulate = Color(1, 0, 0, 1)
+z_index = 1
+position = Vector2(600, 527)
+scale = Vector2(310.6059, 83.81253)
+mesh = SubResource("BoxMesh_8ekm2")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=998262185]
+modulate = Color(1, 0, 0, 1)
+z_index = 1
+position = Vector2(810.99994, 173)
+scale = Vector2(258.0001, 79.00002)
+mesh = SubResource("BoxMesh_8ekm2")
